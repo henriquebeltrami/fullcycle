@@ -1,0 +1,1 @@
+INSERT INTO people(name) values('Henrique');
