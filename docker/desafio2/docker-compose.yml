@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
     container_name: node
     volumes:
-      - "./node:/usr/src/app"
+      - "./node:/app"
     networks:
       - netdesafio2
     depends_on:
