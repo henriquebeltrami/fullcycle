@@ -26,12 +26,12 @@ services:
       dockerfile: Dockerfile
     container_name: node
     volumes:
-      - "./node:/app"
+      - ./node:/app
     networks:
       - netdesafio2
     depends_on:
       - mysql
-    command: sh -c "dockerize -wait tcp://mysql:3306 -timeout 300s -wait-retry-interval 10s node index.js"
+    command: sh -c "npm init -y; npm install express --save && npm install mysql --save; dockerize -wait tcp://mysql:3306 -timeout 300s -wait-retry-interval 10s node index.js"
 
   nginx:
     build:
